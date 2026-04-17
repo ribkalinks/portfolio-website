@@ -9,5 +9,20 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+window.addEventListener("load", function(){
+  const loading = document.getElementById("loading");
+  loading.style.display = "none";
+});
+</script>
   </body>
+  <!-- Loading Screen -->
+<div id="loading">
+  <div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <p>Loading...</p>
+</div>
 </html>
