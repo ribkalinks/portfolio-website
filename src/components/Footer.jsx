@@ -1,24 +1,25 @@
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+
 function Footer() {
 return (
 
 <footer className="footer">
 
 <h3>Ribka Ariyanti</h3>
-
 <p>Junior Web Developer</p>
 
 <div className="footer-social">
 
-<a href="mailto:ariyantiribka1@email.com">
-Email
+<a href="mailto:your@email.com">
+<FaEnvelope /> Email
 </a>
 
 <a href="https://github.com/" target="_blank">
-GitHub
+<FaGithub /> GitHub
 </a>
 
 <a href="https://linkedin.com/" target="_blank">
-LinkedIn
+<FaLinkedin /> LinkedIn
 </a>
 
 </div>

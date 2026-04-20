@@ -1,4 +1,20 @@
 function Projects() {
+
+const projects = [
+{
+title: "Portfolio Website",
+description: "Personal portfolio built using React",
+link: "#"
+},
+
+{
+title: "Landing Page",
+description: "Responsive landing page design",
+link: "#"
+}
+
+]
+
 return (
 
 <section className="projects" id="projects">
@@ -7,17 +23,21 @@ return (
 
 <div className="projects-container">
 
-<div className="project-card">
-<h3>Portfolio Website</h3>
-<p>Personal portfolio built using React</p>
-<a href="#" className="project-btn">View Project</a>
+{projects.map((project, index) => (
+
+<div className="project-card" key={index}>
+
+<h3>{project.title}</h3>
+
+<p>{project.description}</p>
+
+<a href={project.link} className="project-btn">
+View Project
+</a>
+
 </div>
 
-<div className="project-card">
-<h3>Landing Page</h3>
-<p>Responsive landing page design</p>
-<a href="#" className="project-btn">View Project</a>
-</div>
+))}
 
 </div>
 

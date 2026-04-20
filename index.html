@@ -1,28 +1,69 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio-website</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-    <script>
-window.addEventListener("load", function(){
-  const loading = document.getElementById("loading");
-  loading.style.display = "none";
-});
-</script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <meta name="description" content="Ribka Ariyanti - Junior Web Developer specializing in React, JavaScript, and responsive web design." />
+
+  <!-- Title -->
+  <title>Ribka Ariyanti | Junior Web Developer</title>
+
+</head>
+
+<body>
+
   <!-- Loading Screen -->
-<div id="loading">
-  <div class="loader">
-    <span></span>
-    <span></span>
-    <span></span>
+  <div id="loading">
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <p>Loading...</p>
   </div>
-  <p>Loading...</p>
-</div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
+  <div class="cursor-dot"></div>
+
+  <!-- React Root -->
+  <div id="root"></div>
+
+  <!-- React Script -->
+  <script type="module" src="/src/main.jsx"></script>
+
+  <!-- Loading Script -->
+  <script>
+    window.addEventListener("load", function(){
+      const loading = document.getElementById("loading");
+      loading.classList.add("fade-out");
+
+      setTimeout(() => {
+        loading.style.display = "none";
+      }, 500);
+    });
+  </script>
+
+  <!-- Cursor Script -->
+  <script>
+    const cursor = document.querySelector(".cursor");
+    const cursorDot = document.querySelector(".cursor-dot");
+
+    document.addEventListener("mousemove", (e) => {
+      cursor.style.left = e.clientX + "px";
+      cursor.style.top = e.clientY + "px";
+
+      cursorDot.style.left = e.clientX + "px";
+      cursorDot.style.top = e.clientY + "px";
+    });
+  </script>
+
+</body>
 </html>

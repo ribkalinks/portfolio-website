@@ -1,40 +1,55 @@
 import profile from "../assets/profile.png";
 
 function Hero() {
-return (
+  return (
+    <section className="hero" id="home">
 
-<section className="hero" id="home">
+      <div className="hero-container">
 
-<div className="hero-container">
+        {/* TEXT SECTION */}
+        <div className="hero-text">
 
-<div className="hero-text">
+          <h1>Ribka Ariyanti</h1>
 
-<h1>Ribka Ariyanti</h1>
+          <h2>Junior Web Developer</h2>
 
-<h2>Junior Web Developer</h2>
+          <p>
+            I am a passionate Junior Web Developer focused on building responsive
+            and user-friendly websites. Currently learning React and modern web
+            development to create clean and professional web experiences.
+          </p>
 
-<p>
-I am a passionate Junior Web Developer focused on building responsive 
-and user-friendly websites. Currently learning React and modern web 
-development to create clean and professional web experiences.
-</p>
+          <div className="hero-buttons">
 
-<div className="hero-buttons">
-<button>GitHub</button>
-<button>LinkedIn</button>
-</div>
+            <a
+              href="https://github.com/ribkalinks"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="btn-primary">GitHub</button>
+            </a>
 
-</div>
+            <a
+              href="https://www.linkedin.com/in/ribka-ariyanti"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="btn-secondary">LinkedIn</button>
+            </a>
 
-<div className="hero-image">
-<img src={profile} alt="Ribka Ariyanti" />
-</div>
+          </div>
 
-</div>
+        </div>
 
-</section>
+        {/* IMAGE SECTION */}
+        <div className="hero-image">
+          <img src={profile} alt="Ribka Ariyanti" />
+        </div>
 
-)
+      </div>
+
+    </section>
+  );
 }
 
-export default Hero
+export default Hero;
