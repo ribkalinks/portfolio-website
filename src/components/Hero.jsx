@@ -11,7 +11,7 @@ function Hero() {
 
           <h1>Ribka Ariyanti</h1>
 
-          <h2>Junior Web Developer</h2>
+          <h2>Junior Web Developer | React Enthusiast</h2>
 
           <p>
             I am a passionate Junior Web Developer focused on building responsive
