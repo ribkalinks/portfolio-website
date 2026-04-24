@@ -6,7 +6,7 @@ const skills = [
 "JavaScript",
 "React",
 "Git",
-"GitHub"
+"Linux"
 ]
 
 return (

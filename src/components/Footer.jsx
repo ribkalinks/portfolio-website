@@ -10,7 +10,7 @@ return (
 
 <div className="footer-social">
 
-<a href="mailto:your@email.com">
+<a href="mailto:hello@ribka.dev">
 <FaEnvelope /> Email
 </a>
 
