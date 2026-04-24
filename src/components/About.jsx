@@ -15,9 +15,8 @@ and continuously improving my skills in modern web development.
 
 <p>
 Currently, I am focusing on mastering HTML, CSS, JavaScript, and React.
-I also have experience using Git and GitHub for version control and
-collaborative development. I enjoy turning ideas into clean and functional
-web interfaces.
+I also have experience using Git and Linux for development and environment management.
+I enjoy turning ideas into clean and functional web interfaces.
 </p>
 
 <p>
