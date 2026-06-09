@@ -417,41 +417,77 @@ transform: translateY(-5px);
 box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* ================= PROJECTS ================= */
+/* Styling Container Utama Projects */
+.projects {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
 
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333; /* Sesuaikan dengan tema warna portofoliomu */
+}
+
+/* Grid System untuk Wadah Card */
 .projects-container {
-display: flex;
-gap: 25px;
-justify-content: center;
-flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 20px 0;
 }
 
+/* Desain Card Modern & Estetik */
 .project-card {
-background: white;
-padding: 25px;
-border-radius: 15px;
-width: 300px;
-box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-transition: 0.3s;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #f0f0f0;
 }
 
+/* Efek Hover pas Kursor di Atas Card */
 .project-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-.project-card button {
-margin-top: 15px;
-padding: 10px 20px;
-background: #1b5e20;
-color: white;
-border: none;
-border-radius: 8px;
-cursor: pointer;
+.project-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #111;
 }
 
-.project-card button:hover {
-background: #2e7d32;
+.project-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1; /* Biar tinggi teks seimbang */
+}
+
+/* Tombol View Project */
+.project-btn {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background-color: #0070f3; /* Warna biru Next.js, ganti sesuai seleramu */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.project-btn:hover {
+  background-color: #0051a8;
 }
 
 /* ================= CONTACT ================= */
@@ -845,3 +881,4 @@ pointer-events: none;
 transform: translate(-50%, -50%);
 z-index: 9999;
 }
+
