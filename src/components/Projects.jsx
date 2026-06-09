@@ -29,20 +29,18 @@ const Projects = () => {
       <h2>My Projects</h2>
       <div className="projects-container">
         {projects.map((project, index) => (
-          <div key={index} className="project-item">
+          
+          <div key={index} className="project-card">
             <h3>{project.title}</h3>
             <p>{project.description}</p>
-            
-            <div className="project-action">
-              <a 
-                href={project.link} 
-                target={project.link.includes('booking') ? "_self" : "_blank"} 
-                rel="noopener noreferrer"
-                className="project-btn"
-              >
-                View Project
-              </a>
-            </div>
+            <a 
+              href={project.link} 
+              target={project.link.includes('booking') ? "_self" : "_blank"} 
+              rel="noopener noreferrer"
+              className="view-project-btn"
+            >
+              View Project
+            </a>
           </div>
         ))}
       </div>
