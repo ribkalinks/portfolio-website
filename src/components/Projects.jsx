@@ -4,7 +4,7 @@ const projects = [
   {
     title: "Personal Scheduling & Booking System",
     description: "A high-performance web application engineered to streamline personal appointments. Built with Next.js, strict TypeScript type-safety, and integrated with Cloud Firestore for real-time persistence.",
-    link: "https://ribka.dev/booking" // 👈 Tetap pertahankan jalur sukses kita!
+    link: "https://ribka.dev/booking"
   },
   {
     title: "Indosight Official Corporate Website",
@@ -32,14 +32,17 @@ const Projects = () => {
           <div key={index} className="project-item">
             <h3>{project.title}</h3>
             <p>{project.description}</p>
-            <a 
-              href={project.link} 
-              target={project.link.includes('booking') ? "_self" : "_blank"} 
-              rel="noopener noreferrer"
-              className="btn btn-primary" // 👈 Menggunakan class tombol asli template-mu
-            >
-              View Project
-            </a>
+            
+            <div className="project-action">
+              <a 
+                href={project.link} 
+                target={project.link.includes('booking') ? "_self" : "_blank"} 
+                rel="noopener noreferrer"
+                className="project-btn"
+              >
+                View Project
+              </a>
+            </div>
           </div>
         ))}
       </div>
