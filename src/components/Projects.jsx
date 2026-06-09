@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const projects = [
   {
     title: "Personal Scheduling & Booking System",
     description: "A high-performance web application engineered to streamline personal appointments. Built with Next.js, strict TypeScript type-safety, and integrated with Cloud Firestore for real-time persistence.",
-    link: "/booking"
+    link: "https://ribka.dev/booking" // 👈 Pakai link absolut domain utamamu langsung!
   },
   {
     title: "Indosight Official Corporate Website",
@@ -38,27 +37,17 @@ const Projects = () => {
                 <p className="text-neutral-400 mb-6">{project.description}</p>
               </div>
 
-              {/* 🛠️ Bagian Tombol yang Sudah Diperbaiki Menggunakan <Link> */}
+              {/* 🛠️ Tombol yang menggunakan tag <a> murni agar diproses langsung oleh Netlify Redirects */}
               <div className="mt-auto">
-                {project.link.startsWith('http') ? (
-                  // Kalau link eksternal (seperti indosight.co), tetap pakai tag <a> biasa
-                  <a 
-                    href={project.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-block bg-emerald-500 hover:bg-emerald-600 text-neutral-900 font-bold py-2 px-4 rounded transition-colors duration-300"
-                  >
-                    View Project
-                  </a>
-                ) : (
-                  // Kalau rute internal (seperti /booking), WAJIB pakai <Link to> biar gak eror di Firefox!
-                  <Link 
-                    to={project.link} 
-                    className="inline-block bg-emerald-500 hover:bg-emerald-600 text-neutral-900 font-bold py-2 px-4 rounded transition-colors duration-300"
-                  >
-                    View Project
-                  </Link>
-                )}
+                <a 
+                  href={project.link} 
+                  // Khusus untuk project booking, dibuka di tab yang sama agar URL-nya berubah anggun
+                  target={project.link.includes('booking') ? "_self" : "_blank"} 
+                  rel="noopener noreferrer"
+                  className="inline-block bg-emerald-500 hover:bg-emerald-600 text-neutral-900 font-bold py-2 px-4 rounded transition-colors duration-300"
+                >
+                  View Project
+                </a>
               </div>
             </div>
           ))}
