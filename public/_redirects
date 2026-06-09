@@ -1,1 +1,5 @@
+# 1. Aturan untuk menarik semua aset static Next.js (CSS, JS, Fonts)
+/_next/* https://booking.ribka.dev/_next/:splat    200
+
+# 2. Aturan rute utama yang kemarin
 /booking    https://booking.ribka.dev    200
