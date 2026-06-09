@@ -3,7 +3,7 @@ function Projects() {
     {
       title: "Personal Scheduling & Booking System",
       description: "A high-performance web application engineered to streamline personal appointments. Built with Next.js, strict TypeScript type-safety, and integrated with Cloud Firestore for real-time persistence.",
-      link: "https://booking.ribka.dev"
+      link: "https://booking"
     },
     {
       title: "Indosight Official Corporate Website",
