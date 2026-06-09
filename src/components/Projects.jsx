@@ -32,15 +32,32 @@ const Projects = () => {
           <div key={index} className="project-card">
             <h3>{project.title}</h3>
             <p>{project.description}</p>
-            {/* ✅ Menambahkan kembali class tombol asli agar tombol hijaunya yang rapi muncul lagi */}
-            <a 
-              href={project.link} 
-              target={project.link.includes('booking') ? "_self" : "_blank"} 
-              rel="noopener noreferrer"
-              className="btn"
-            >
-              View Project
-            </a>
+            
+            {/* 🛠️ SUNTIKAN CSS LANGSUNG: Tombol dijamin hijau, rapi, kotak, dan punya space bagus */}
+            <div style={{ marginTop: 'auto', paddingTop: '15px' }}>
+              <a 
+                href={project.link} 
+                target={project.link.includes('booking') ? "_self" : "_blank"} 
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-block',
+                  backgroundColor: '#10b981', // Warna hijau emerald estetik
+                  color: '#171717',          // Warna teks gelap biar kontras
+                  fontWeight: 'bold',
+                  padding: '10px 20px',
+                  borderRadius: '6px',
+                  textDecoration: 'none',
+                  transition: 'background-color 0.3s ease',
+                  fontSize: '14px'
+                }}
+                // Efek hover sederhana saat kursor di atas tombol
+                onMouseOver={(e) => e.target.style.backgroundColor = '#059669'}
+                onMouseOut={(e) => e.target.style.backgroundColor = '#10b981'}
+              >
+                View Project
+              </a>
+            </div>
+
           </div>
         ))}
       </div>
