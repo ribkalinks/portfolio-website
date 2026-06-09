@@ -32,11 +32,12 @@ const Projects = () => {
           <div key={index} className="project-card">
             <h3>{project.title}</h3>
             <p>{project.description}</p>
+            {/* ✅ Menambahkan kembali class tombol asli agar tombol hijaunya yang rapi muncul lagi */}
             <a 
               href={project.link} 
               target={project.link.includes('booking') ? "_self" : "_blank"} 
               rel="noopener noreferrer"
-              className="view-project-btn"
+              className="btn"
             >
               View Project
             </a>
