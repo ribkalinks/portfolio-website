@@ -722,11 +722,12 @@ background: #ecfdf5;
   margin-bottom: 40px;
   font-size: 2rem;
   color: #1b5e20;
+}
 
 .projects-container {
   display: flex;
-  flex-wrap: wrap;        /* Biar kalau layarnya kecil/buka di HP, kartunya otomatis rapi turun ke bawah */
-  justify-content: center;/* Baris atas maupun baris bawah (Landing Page) otomatis ngumpul di tengah */
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   max-width: 1200px;
   width: 100%;
@@ -736,43 +737,45 @@ background: #ecfdf5;
 /* ================= PROJECT CARD ================= */
 
 .project-card {
-background: white;
-padding: 25px;
-border-radius: 15px;
-width: 280px;
-box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-transition: 0.3s;
-text-align: left;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 280px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.3s;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 .project-card h3 {
-color: #1b5e20;
-margin-bottom: 10px;
+  color: #1b5e20;
+  margin-bottom: 10px;
 }
 
 .project-card p {
-color: #555;
-font-size: 14px;
-margin-bottom: 15px;
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 15px;
 }
 
 .project-btn {
-background: #1b5e20;
-color: white;
-padding: 8px 16px;
-border-radius: 8px;
-text-decoration: none;
-font-size: 14px;
-transition: .3s;
+  background: #1b5e20;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: .3s;
 }
 
 .project-btn:hover {
-background: #2e7d32;
+  background: #2e7d32;
 }
 
 /* ================= CONTACT FORM ================= */
