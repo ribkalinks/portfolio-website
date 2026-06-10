@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/booking",
+      "destination": "https://booking.ribka.dev",
+      "permanent": true
+    }
+  ]
+}
